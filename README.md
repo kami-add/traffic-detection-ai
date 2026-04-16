@@ -242,3 +242,22 @@ npm run dev
 - 风险规则可视化编辑后台
 - 登录鉴权 + 管理员角色
 - Docker Compose 一键启动（MySQL + SpringBoot + Vue）
+
+---
+
+## Windows 一键脚本（D:\\weburl）
+
+项目已提供 `windows-scripts/`：
+
+- `copy-to-d-weburl.bat`：一键复制整个项目到 `D:\weburl`
+- `start-backend.bat`：启动后端（8080）
+- `start-frontend.bat`：启动前端（5173）
+- `start-all.bat`：同时拉起前后端
+
+### 使用顺序
+
+1. 双击运行：`windows-scripts\\copy-to-d-weburl.bat`
+2. 复制完成后，到 `D:\weburl\\windows-scripts` 双击：`start-all.bat`
+3. 浏览器打开：`http://localhost:5173`
+
+> 首次启动前端会自动执行 `npm install`。
