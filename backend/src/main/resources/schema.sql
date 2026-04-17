@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS detection_record (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    url VARCHAR(2083) NOT NULL,
+    score INT NOT NULL,
+    level VARCHAR(20) NOT NULL,
+    created_at DATETIME NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS risk_rule (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    rule_key VARCHAR(80) NOT NULL UNIQUE,
+    weight INT NOT NULL,
+    description VARCHAR(255) NOT NULL
+);
